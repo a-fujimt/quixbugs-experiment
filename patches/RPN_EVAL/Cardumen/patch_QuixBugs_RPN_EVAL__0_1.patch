@@ -2,12 +2,11 @@
 --- java_programs\/RPN_EVAL.java
 +++ java_programs\/RPN_EVAL.java
 @@ -31,7 +31,7 @@
- 				java.lang.Double b = ((java.lang.Double) (stack.pop()));
- 				java.lang.Double c = 0.0;
- 				java.util.function.BinaryOperator<java.lang.Double> bin_op = op.get(token);
--				c = bin_op.apply(a, b);
+                 Double b = (Double) stack.pop();
+ 		Double c = 0.0;
+ 		BinaryOperator<Double> bin_op = op.get(token);
+-		c = bin_op.apply(a,b);
 +				c = bin_op.apply(b, a);
- 				stack.push(c);
- 			}
- 		}
-
+                 stack.push(c);
+             }
+         }

@@ -1,13 +1,14 @@
 
 --- java_programs\/QUICKSORT.java
 +++ java_programs\/QUICKSORT.java
-@@ -23,7 +23,7 @@
- 		for (java.lang.Integer x : arr.subList(1, arr.size())) {
+@@ -23,8 +23,9 @@
+         for (Integer x : arr.subList(1, arr.size())) {
  			if (x < pivot) {
- 				lesser.add(x);
--			}else { 				if (x > pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
 +			}else { 				if (true) {
- 					greater.add(x);
- 				}}
- 		}
-
+                 greater.add(x);
++							}
+             }
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
